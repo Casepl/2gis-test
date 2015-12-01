@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+
+	<div class="chat-room">
+
+		<form class="enter-form">
+			<input type="text" placeholder="Имя"/>
+			<div class="error _hidden"></div>
+			<button type="submit">Войти в чат</button>
+		</form>
+
+		<div class="chat">
+			<div class="chat__main">
+				<div class="chat__log"></div>
+				<div class="chat__users">
+					<div class="chat__users__title">Пользователи</div>
+					<ul class="chat__users__list">
+					</ul>
+				</div>
+			</div>
+			<form class="chat__message-form">
+				<textarea rows="3" placeholder="Сообщение"></textarea>
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+
+	</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/events.js"></script>
+	<script>
+		var socket = io();
+	</script>
+	<script src="/js/chat-room.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			chatRoom.init();
+		});
+	</script>
+
+</body>
+</html>

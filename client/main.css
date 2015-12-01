@@ -1,0 +1,146 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+body, button, select, input, textarea {
+	font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+button, select, input, textarea {
+	margin: 0;
+}
+
+.chat-room {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Enter form */
+
+.chat-room .enter-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .8);
+}
+
+.chat-room .enter-form._closed {
+	display: none;
+}
+
+
+.chat-room .enter-form input {
+	font-size: 35px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.chat-room .enter-form .error {
+	color: red;
+	margin-bottom: 20px;
+}
+.chat-room .enter-form .error._hidden {
+	display: none;
+}
+
+
+.chat-room .enter-form button {
+	padding: 10px 20px;
+	font-size: 20px;
+	color: #00a7e2;
+	background-color: #e5e5e5;
+	border: none;
+}
+
+
+/* Chat */
+.chat-room .chat {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.chat-room .chat__main {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+
+/* Log */
+.chat-room .chat__log {
+	flex: 1;
+	padding: 10px;
+	overflow: auto;
+}
+.chat-room .chat__log__message:not(:last-child),
+.chat-room .chat__log__user-info-message:not(:last-child) {
+	margin-bottom: 10px;
+}
+.chat-room .chat__log__message .user-name {
+	margin-right: 10px;
+}
+.chat-room .chat__log__user-info-message {
+	color: #ccc;
+}
+
+
+/* User list */
+.chat-room .chat__users {
+	background-color: #efefef;
+	padding: 20px 0 20px 20px;
+	overflow: auto;
+	width: 200px;
+}
+.chat-room .chat__users__title {
+	text-transform: uppercase;
+	color: #bbb;
+	font-size: 12px;
+	letter-spacing: .15em;
+	margin-right: -.15em;
+	margin-bottom: 20px;
+	padding-right: 20px;
+}
+.chat-room .chat__users__list {
+	margin: 0;
+	padding: 0;
+}
+.chat-room .chat__users__list li {
+	margin: 0;
+	padding: 5px 0;
+	list-style: none;
+}
+.chat-room .chat__users__list li:not(:last-child) {
+	border-bottom: 1px solid #ddd;
+}
+
+
+/* New message */
+.chat-room .chat__message-form {
+	display: flex;
+}
+.chat-room .chat__message-form textarea {
+	font-size: 20px;
+	flex: 1;
+	border: 1px solid #ddd;
+	border-right: none;
+	resize: none;
+}
+.chat-room .chat__message-form button {
+	color: #00a7e2;
+	background-color: #e5e5e5;
+	padding: 5px 10px;
+	border: none;
+	/*border: 1px solid #ddd;*/
+	font-size: 20px;
+}
