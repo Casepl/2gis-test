@@ -60,6 +60,10 @@ button, select, input, textarea {
 	background-color: #e5e5e5;
 	border: none;
 }
+.chat-room .enter-form button:disabled {
+	opacity: .5;
+	color: #ccc;
+}
 
 
 /* Chat */
@@ -143,4 +147,8 @@ button, select, input, textarea {
 	border: none;
 	/*border: 1px solid #ddd;*/
 	font-size: 20px;
+}
+.chat-room .chat__message-form button:disabled {
+	opacity: .5;
+	color: #ccc;
 }
